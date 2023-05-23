@@ -1,13 +1,13 @@
-import "./TextCamp.css"
+import "./CampoTexto.css"
 
-const TextCamp = (props) => {
+const CampoTexto = (props) => {
     const placeholderModificado = `${props.placeholder}...`
 
     return (
         <div className="campo-text">
             <label>{props.label}</label>
-            <input placeholder={placeholderModificado}/>
+            <input required={props.obrigatorio} placeholder={placeholderModificado}/>
         </div>
     )
 }
-export default TextCamp
+export default CampoTexto
