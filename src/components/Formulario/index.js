@@ -16,6 +16,10 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setCargo('')
+        setTime('')
+        setImagem('')
+        setNome('')
     }
 
     return(
