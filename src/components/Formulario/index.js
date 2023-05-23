@@ -17,11 +17,12 @@ const Formulario = () => {
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-
+    const [time, setTime] = useState('')
     const aoSalvar = (evento) => {
         evento.preventDefault()
         console.log("Form foi submetido => ", nome, cargo, imagem)
     }
+
     return(
         <section className="formulario">
             <form onSubmit={aoSalvar}>
@@ -49,7 +50,13 @@ const Formulario = () => {
                     valor={imagem}
                     aoAlterado={valor => setImagem(valor)}  
                 />
-                <ListaSuspensa label="Time" itens={times}/>
+                <ListaSuspensa 
+                    label="Time"
+                    itens={times}
+                    obrigatorio={true}
+                    valor={time}
+                    aoAlterado={valor => setTime(valor)}
+                 />
                 <Botao>
                     Criar Card
                 </Botao>
